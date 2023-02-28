@@ -44,5 +44,5 @@ If you are simulating a population without stimulation, set the variable IS_SIgn
 Note that to run the code on several cores, you must define the number of CPUs in "ompnum" variable in vars.f90. Default value is 4.
 
 # Converting the results into .MAT file
-Use MATLAB software to read and save the data as MAT files. Then use the codes in the "analyzing" folder to analyze and plot the figures.
+Use MATLAB software to read and save the data as MAT files. Then use the Matlab codes (*.m) to analyze and plot the figures.
 data_reader.m: By running this code, the code will try to load the .txt files and save them as a .MAT files with appropriate names for each part of simulations and ensemble.
