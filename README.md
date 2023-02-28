@@ -40,9 +40,11 @@ gfortran -m64 -O3 -fopenmp vars.f90 log.f90 writer.f90 random.f90 modu.f90 main_
 ./a.out
 
 In the next step, you must provide the stimulation frequency (variable: omega) and amplitude (variable: amp). The amplitude will then be multiplied by the damp value in vars.f90.
-If you are simulating a population without stimulation, set the variable IS_SIgnal to 0 and comment on the line in main_p.f90, which asks you to enter the values.  
+If you are simulating a population without stimulation, set the variable IS_SIgnal to 0 and comment the line in main_p.f90, which asks you to enter the values.  
 Note that to run the code on several cores, you must define the number of CPUs in "ompnum" variable in vars.f90. Default value is 4.
 
 # Converting the results into .MAT file
-Use MATLAB software to read and save the data as MAT files. Then use the Matlab codes (*.m) to analyze and plot the figures.
-data_reader.m: By running this code, the code will try to load the .txt files and save them as a .MAT files with appropriate names for each part of simulations and ensemble.
+Use MATLAB software to read and save the data as MAT files. Use the Matlab codes (*.m) to analyze and plot the figures.  
+data_reader.m: By running this code, the code will try to load the .txt files and save them as a .MAT files with appropriate names for each part of simulations and ensemble.  
+analyser_taum_less_more.m: The code uses the data saved by "data_reader.m" and moved to "data/" folder. This code finds the distribution of the synaptic weights among neurons with different membrane time constants and saves the result.  
+g_plotter.m: the code uses the result from the previous step and plots the distribution of synaptic weights for different stimulation frequencies.  
