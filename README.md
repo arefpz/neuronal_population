@@ -48,3 +48,15 @@ Use MATLAB software to read and save the data as MAT files. Use the Matlab codes
 data_reader.m: By running this code, the code will try to load the .txt files and save them as a .MAT files with appropriate names for each part of simulations and ensemble.  
 analyser_taum_less_more.m: The code uses the data saved by "data_reader.m" and moved to "data/" folder. This code finds the distribution of the synaptic weights among neurons with different membrane time constants and saves the result.  
 g_plotter.m: the code uses the result from the previous step and plots the distribution of synaptic weights for different stimulation frequencies.  
+
+
+# Coupled neurons
+stdp_coupled_LIF_neuron.m simulates the coupled neurons stimulated by tACS and save the results in 'data/.'
+
+analyzer.m will analyze the data saved in the 'data/' folder. The outcome contains the average synaptic weight between coupled neurons at different stimulation frequencies and membrane time constant of second neurons, while the MTC of neuron 1 is 10ms.
+
+dT_spikes.m will find the distribution of spike timing differences among neuron spikes.
+
+phase_diagram_taum.m finds the phase of spikes for both neurons.
+
+stdp_sum_omega.m finds the convolution of the STDP time window and the spike timing differences of neurons.
